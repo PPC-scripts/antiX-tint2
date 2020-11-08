@@ -1,0 +1,20 @@
+#!/bin/bash
+vol=$(awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master)s)
+high=65
+medium=40
+low=0
+	if [ "${vol::-1}" -ge 65 ]; then
+		echo /usr/share/icons/papirus-antix/48x48/actions/audio-volume-high.png
+		echo "$vol"
+	elif [ "${vol::-1}" -ge 40 ]; then
+			echo /usr/share/icons/papirus-antix/48x48/actions/audio-volume-medium.png
+			echo "$vol"
+	elif
+	       [ "${vol::-1}" -ge 0 ]; then
+       			echo /usr/share/icons/papirus-antix/48x48/actions/audio-volume-low.png
+	 		echo "$vol"	
+	elif
+	       [ "${vol::-1}" -eq 0 ]; then
+       			echo /usr/share/icons/papirus-antix/48x48/actions/audio-volume-muted.png
+	 		echo "$vol"	 			
+ fi
