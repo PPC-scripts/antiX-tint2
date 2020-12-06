@@ -432,7 +432,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 5
 button = new
-button_icon = /usr/share/icons/papirus-antix/22x22/panel/indicator-rss-aware.png
+button_icon = /usr/share/icons/papirus-antix/48x48/actions/podcast-amarok.png
 button_text = 
 button_tooltip = Gestor de ligações de rede - Connman
 button_lclick_command = WINID=$(wmctrl -lx | grep 'Connman System Tray' | awk 'NR==1{print $1}'); if [ $WINID ]; then  wmctrl -ia $WINID & else    cmst -d & fi
