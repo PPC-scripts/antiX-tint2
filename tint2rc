@@ -466,7 +466,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 7
 button = new
-button_icon = /usr/share/icons/papirus-antix/22x22/panel/weather-few-clouds.png
+button_icon = /usr/share/icons/papirus-antix/24x24/panel/weather-few-clouds.png
 button_text = 
 button_tooltip = Tempo
 button_lclick_command = WINID=$(wmctrl -lx | grep 'Simple Weather' | awk 'NR==1{print $1}'); if [ $WINID ]; then  wmctrl -ia $WINID & else roxterm --hide-menubar --title "Simple Weather" --zoom=0,85 --geometry 130x40 -e bash -c "curl 'http://wttr.in/?lang=pt'; read -N1;" & fi
