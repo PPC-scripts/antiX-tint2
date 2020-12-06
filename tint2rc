@@ -449,7 +449,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 6
 button = new
-button_icon = /usr/share/icons/papirus-antix/22x22/panel/audio-volume-high.png
+button_icon = /usr/share/icons/papirus-antix/24x24/actions/stock_volume.png
 button_text = 
 button_tooltip = Volume
 button_lclick_command = screenX=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1) ; screenY=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2) ; x=`expr $screenX - 310` ; y=`expr $screenY - 60` ; yad --scale --max-value 100 --value $(amixer -M get Master | awk -v FS="[[%]" '/%/ {print $2}') --print-partial --undecorated --width 300 --fixed --sticky --posx=$x --posy=$y --on-top --escape-ok --no-buttons --close-on-unfocus   | while read VolNew; do amixer -M -q set Master ${VolNew}%; done
